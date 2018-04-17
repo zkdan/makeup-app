@@ -1,0 +1,28 @@
+.search-case__item--inactive {
+  opacity: 0.5; }
+
+.search-case__image,
+.display-case__image {
+  width: 100%; }
+
+.search-case__brand,
+.display-case__brand {
+  text-transform: uppercase; }
+
+.search-case ul,
+.display-case ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: baseline;
+  padding: 0; }
+  .search-case ul li,
+  .display-case ul li {
+    list-style-type: none;
+    flex-grow: 0;
+    max-width: 130px;
+    margin: 1%; }
+
+.display-case ul li {
+  max-width: 300px;
+  margin-bottom: 100px; }
