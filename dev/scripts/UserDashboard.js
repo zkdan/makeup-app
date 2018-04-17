@@ -83,7 +83,3 @@ handleChange(){
 }
 
 export default UserDashboard;
-
-// const themeStyle = {
-//   backgroundColor: this.state.themeColor
-// }
