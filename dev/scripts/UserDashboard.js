@@ -76,7 +76,7 @@ handleChange(){
           <input type="color" onChange={this.handleColorChange} />
           <button onClick={this.saveColor}>Save Color</button>
           <button onClick={this.generateShareURL}>Get Share URL</button>
-          <SearchBar userName={this.props.user}/>
+          <SearchBar userName={this.props.userName}/>
         </div> 
       )
     }
