@@ -37,7 +37,7 @@ class Login extends Component {
 		this.setState({
 			createEmail:'',
 			createPassword:'',
-			userName:userName
+			userName:email.substring(0, email.indexOf('@'))
 		})
 
 
@@ -82,7 +82,7 @@ class Login extends Component {
       	<div>
 
       	        { this.state.loggedIn ?
-				<div className=" user-dashboard">
+				<div className="user-dashboard">
 					<div className='sign-out'>
 						<button onClick={this.signOut}>Sign Out</button>
 					</div>

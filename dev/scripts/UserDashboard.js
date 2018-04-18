@@ -8,8 +8,7 @@ class UserDashboard extends Component {
   super();  
   this.state={
     logoURL:'',
-    themeColor:'',
-    colorMessage:'Save color'
+    themeColor:''
   }
 
     this.saveLogo = this.saveLogo.bind(this)
@@ -37,9 +36,7 @@ handleChange(){
   let imageName = inputs[0].files[0].name;
 
   this.setState({
-    logoURL:imageName,
-    colorMessage:'Save color'
-  });
+    logoURL:imageName  });
 }
   saveLogo(event){
     event.preventDefault();
@@ -52,8 +49,7 @@ handleChange(){
   handleColorChange(){
     let inputs = document.getElementsByTagName('input');    
     this.setState({
-      themeColor:inputs[1].value,
-      colorMessage:'Color saved'
+      themeColor:inputs[1].value
     })
   }
   saveColor(event){
@@ -67,7 +63,7 @@ handleChange(){
     render() {
       return (
         <div>
-          <h2>User Dashboard</h2>
+          <h2>{this.props.userName}'s Dashboard</h2>
           <div className="user-dashboard__header" style={{backgroundColor: this.state.themeColor}}>
            <img src={this.state.logoURL}  style={hideStyle}/>
             <input style={hideStyle}
@@ -76,7 +72,7 @@ handleChange(){
             <button type="submit" onClick={this.saveLogo} style={hideStyle}>Save Logo</button>
             <p>Change theme color</p>
             <input type="color" onChange={this.handleColorChange} value={this.state.themeColor}/>
-            <button onClick={this.saveColor}>{this.state.colorMessage}</button>
+            <button onClick={this.saveColor}>Save color</button>
           </div>
           <SearchBar userName={this.props.userName}/>
         </div> 
