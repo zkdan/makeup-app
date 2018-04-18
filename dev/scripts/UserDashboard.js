@@ -8,7 +8,7 @@ class UserDashboard extends Component {
   super();  
   this.state={
     logoURL:'',
-    themeColor:'red'
+    themeColor:''
   }
 
     this.saveLogo = this.saveLogo.bind(this)
@@ -61,21 +61,19 @@ handleChange(){
     }
     dbRef.set(newPref)
   }
-  generateShareURL(event){
-      event.preventDefault();
-  }
-
     render() {
       return (
-        <div className="dashboard"  style={{backgroundColor: this.state.themeColor}}>
-         <img src={this.state.logoURL} />
-          <input
-            type="file" onChange={this.handleChange}
-          />
-          <button type="submit" onClick={this.saveLogo}>Save Logo</button>
-          <input type="color" onChange={this.handleColorChange} />
-          <button onClick={this.saveColor}>Save Color</button>
-          <button onClick={this.generateShareURL}>Get Share URL</button>
+        <div >
+          <div className="user-dashboard" style={{backgroundColor: this.state.themeColor}}>
+           <img src={this.state.logoURL} />
+            <input
+              type="file" onChange={this.handleChange}
+            
+            />
+            <button type="submit" onClick={this.saveLogo}>Save Logo</button>
+            <input type="color" onChange={this.handleColorChange} />
+            <button onClick={this.saveColor}>Save Color</button>
+          </div>
           <SearchBar userName={this.props.userName}/>
         </div> 
       )

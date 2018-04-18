@@ -90,7 +90,8 @@ class Login extends Component {
 					<DisplayCase userName={this.state.userName}/>
 				</div>
       	        :
-      	          <div>
+      	          <div className="welcome">
+      	          	<h2>Makeup App</h2>
 	      	          <div className="create-user">
 	      	            <form onSubmit={(event) => this.createUser(event)}>
 	      	              <input type="text" placeholder="Please enter your e-mail address" onChange={(event) => this.handleChange(event, "createEmail")} />
@@ -98,12 +99,13 @@ class Login extends Component {
 	      	              <button>Create User</button>
 	      	            </form>
 	      	          </div>
-
-      	            <form onSubmit={(event) => this.signIn(event)}>
-      	              <input type="text" placeholder="Please enter your e-mail address" onChange={(event) => this.handleChange(event, "loginEmail")} />
-      	              <input type="password" placeholder="Please enter your desired password" onChange={(event) => this.handleChange(event, "loginPassword")} />
-      	              <button>Login</button>
-      	            </form>
+	      	          <div className="sign-in-user">
+	      	            <form onSubmit={(event) => this.signIn(event)}>
+	      	              <input type="text" placeholder="Please enter your e-mail address" onChange={(event) => this.handleChange(event, "loginEmail")} />
+	      	              <input type="password" placeholder="Please enter your desired password" onChange={(event) => this.handleChange(event, "loginPassword")} />
+	      	              <button>Login</button>
+	      	            </form>
+	      	          </div>
       	          </div>
       	        }
       	</div>

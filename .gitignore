@@ -5,7 +5,7 @@ node_modules
 
 # testing
 /coverage
-
+/scripts/old_app.js
 # production
 /build
 

@@ -4,14 +4,14 @@ import SearchedProduct from './SearchedProduct.js';
 
 import axios from 'axios';
 
-const apiURL = 'http://makeup-api.herokuapp.com/api/v1/products.json?'
+const apiURL = 'https://makeup-api.herokuapp.com/api/v1/products.json?'
 const brandURL = 'brand='
 const productTypeUrl = 'product_type='
 
 
 class SearchBar extends Component {
 	constructor(props) {
-		super();
+		super();w
 		this.state = {
 		  userInput:'',
 		  searchReturn:[]
