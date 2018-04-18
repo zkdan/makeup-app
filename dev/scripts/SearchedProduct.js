@@ -31,7 +31,7 @@ class SearchedProduct extends Component {
 
 		})
 		const dbRef = firebase.database().ref( `${this.props.userName}` +'/products/' + `${this.props.id}`);
-		console.log(`${this.props.userName}` + '/products/' + `${this.props.id}`)
+		// console.log(`${this.props.userName}` + '/products/' + `${this.props.id}`)
 		const newProduct = {
 			"id":this.props.id,
 			"brand":this.props.brand,
