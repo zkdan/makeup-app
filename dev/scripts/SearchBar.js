@@ -11,7 +11,7 @@ const productTypeUrl = 'product_type='
 
 class SearchBar extends Component {
 	constructor(props) {
-		super();w
+		super();
 		this.state = {
 		  userInput:'',
 		  searchReturn:[]
@@ -75,7 +75,7 @@ class SearchBar extends Component {
 
     render() {
       return (
-        <div>
+        <div className="search-bar">
 			<form>
 		      	<input type="text" onChange={this.handleChange} />
 		      	<button type="submit" onClick={this.searchByBrand}>Search Brands</button>

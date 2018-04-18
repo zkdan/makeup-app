@@ -82,7 +82,7 @@ class Login extends Component {
       	<div>
 
       	        { this.state.loggedIn ?
-				<div>
+				<div className=" user-dashboard">
 					<div className='sign-out'>
 						<button onClick={this.signOut}>Sign Out</button>
 					</div>

@@ -1,4 +1,7 @@
-
+button{
+	padding: 10px;
+	border-radius:10px;
+}
 .welcome{
 	margin: 0 auto;
 	h2{
@@ -28,7 +31,6 @@
 
 .search-case,
 .display-case {
-
 
 	&__image{
 		width: 100%;
@@ -67,6 +69,33 @@
 }
 
 .user-dashboard{
-	padding: 20px;
+	border:1px solid black;
+	padding:10px;
+	h2{
+		text-align: center;
+	}
+	&__header{
+		p{
+			display: inline-block;
+			margin-right:30px;
+		}
+		button{
+			display: block;
+			
+		}
+	}
 }
+.search-bar{
+	padding: 20px;
+	input[type=text]{
+		width: 80%;
+		max-width: 500px;
+		padding:10px;
+		margin-right: 20%;
+	}
+	button{
+		display: inline-block;
+		margin: 10px;
 
+	}
+}

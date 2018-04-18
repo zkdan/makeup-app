@@ -1,3 +1,7 @@
+button {
+  padding: 10px;
+  border-radius: 10px; }
+
 .welcome {
   margin: 0 auto; }
   .welcome h2 {
@@ -44,4 +48,23 @@
   margin-bottom: 100px; }
 
 .user-dashboard {
+  border: 1px solid black;
+  padding: 10px; }
+  .user-dashboard h2 {
+    text-align: center; }
+  .user-dashboard__header p {
+    display: inline-block;
+    margin-right: 30px; }
+  .user-dashboard__header button {
+    display: block; }
+
+.search-bar {
   padding: 20px; }
+  .search-bar input[type=text] {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    margin-right: 20%; }
+  .search-bar button {
+    display: inline-block;
+    margin: 10px; }
