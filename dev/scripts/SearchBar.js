@@ -44,6 +44,26 @@ class SearchBar extends Component {
 			  })
 		  })
 
+		//Ryan COMMENT!
+		/* 
+		  With axios, we can pass in and object that will allow us to build up the query we want. This will look a lot like jQuery!
+
+		  Instead of building it from vars like `apiURL + brandURL + chosenBrand`. We can do this.
+
+		  axios({
+			  url: theurl,
+			  method: 'GET',
+			  params: {
+				  brand: thebrand,
+				  product_type: theproduct
+			  }
+		  })
+
+		  this helps make it a bit cleaner!
+
+		  Also curious to the thought process around setting a `data` variable outside of request, and then assigning the data inside.
+
+		*/
 	}
 
 	searchByProductType(event){

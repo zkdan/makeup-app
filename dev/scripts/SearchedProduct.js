@@ -31,6 +31,17 @@ class SearchedProduct extends Component {
 
 		})
 		const dbRef = firebase.database().ref( `${this.props.userName}` +'/products/' + `${this.props.id}`);
+		//Ryan COMMENT!
+		/* 
+		Similar to another comment, but here you can just go ahead and use template literals instead of adding the concatenation here. 
+			.ref( `${this.props.userName}` +'/products/' + `${this.props.id}`)
+
+		can become
+
+			.ref(`${this.props.userName}/products/${this.props.id}`);
+
+		*/
+
 		// console.log(`${this.props.userName}` + '/products/' + `${this.props.id}`)
 		const newProduct = {
 			"id":this.props.id,

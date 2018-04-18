@@ -32,24 +32,24 @@ class DisplayCase extends Component {
     });
   } 
 
-    render() {
-      return (
-        <div className="display-case">
-          <h2>Display Case</h2>
-          <img className="display-case__logo" src={this.props.logo} />
-          {this.state.hasItems ? (
-            <ul className="display-case__item-container">
-              {this.state.selectedProducts.map((item) => {
-                  return <SavedProduct key={item.id} id={item.id} brand={item.brand} image={item.image} productName={item.name} userName={this.props.userName}/>
-              })}
-            </ul> ) : (
+  render() {
+    return (
+      <div className="display-case">
+        <h2>Display Case</h2>
+        <img className="display-case__logo" src={this.props.logo} />
+        {this.state.hasItems ? (
+          <ul className="display-case__item-container">
+            {this.state.selectedProducts.map((item) => {
+                return <SavedProduct key={item.id} id={item.id} brand={item.brand} image={item.image} productName={item.name} userName={this.props.userName}/>
+            })}
+          </ul> ) : (
 
-              <p className="display-case__message">{this.state.displayMessage}</p> 
-            )}
-                  
-        </div> 
-      )
-    }
+            <p className="display-case__message">{this.state.displayMessage}</p> 
+          )}
+                
+      </div> 
+    )
+  }
 }
 
 export default DisplayCase;
